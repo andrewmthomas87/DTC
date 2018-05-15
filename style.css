@@ -1,0 +1,134 @@
+
+html {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+body {
+	margin: 0;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #222f3e;
+}
+
+section>div {
+	flex: 1;
+}
+
+section>div:first-child>div {
+	padding: 1.875em 1.25em;
+}
+
+section>div:first-child>div h2 {
+	color: #fff;
+	margin: 0;
+	font-size: 5em;
+	font-weight: 200;
+}
+
+section>div:first-child>div h2 span {
+	color: #c8d6e5;
+}
+
+section>div:first-child>div h2 span.small {
+	color: #54a0ff;
+	font-size: 0.375em;
+	font-weight: 300;
+}
+
+section>div:first-child>div h4 {
+	color: #c8d6e5;
+	padding: 0 0.875em;
+	margin: 0;
+	font-size: 1.125em;
+	font-weight: 200;
+}
+
+section>div:first-child>div h4 span {
+	color: #ff6b6b;
+	font-weight: 300;
+}
+
+section>div:last-child {
+	height: 100%;
+	background-color: #2b3b4e;
+	overflow-y: auto;
+}
+
+section>div:last-child>div {
+	padding: 5.75em 1.25em;
+	padding-bottom: 2.5em;
+}
+
+section>div:last-child>div div.line {
+	height: 2px;
+	background-color: #54a0ff;
+}
+
+section>div:last-child>div div.events {
+	padding-top: 2em;
+}
+
+section>div:last-child>div div.events>div {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-bottom: 0.5em;
+}
+
+section>div:last-child>div div.events>div span {
+	display: block;
+	color: #8395a7;
+	width: 5em;
+	padding-right: 1em;
+	text-align: right;
+}
+
+section>div:last-child>div div.events>div div {
+	flex: 1;
+	color: #fff;
+	padding: 0.5em 1em;
+	background-color: #2e86de;
+	line-height: 1em;
+	font-size: 0.875em;
+	font-weight: 300;
+}
+
+section>div:last-child>div div.events>div.shower div {
+	height: 2em;
+}
+
+section>div:last-child>div div.events>div.breakfast div {
+	height: 4.5em;
+}
+
+section>div:last-child>div div.events>div.get-dressed div {
+	height: 1em;
+}
+
+section>div:last-child>div div.deadline {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 1.5em;
+}
+
+section>div:last-child>div div.deadline span {
+	display: block;
+	color: #8395a7;
+	width: 5em;
+	padding-right: 1em;
+	text-align: right;
+}
+
+section>div:last-child>div div.deadline div {
+	flex: 1;
+	height: 2px;
+	background-color: #ee5253;
+}
