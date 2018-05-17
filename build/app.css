@@ -1,0 +1,195 @@
+section#app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #222f3e;
+}
+section#app > div {
+  flex: 1;
+}
+section#app > div#clock > div {
+  padding: 1.875em 1.25em;
+}
+section#app > div#clock > div h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 5em;
+  font-weight: 200;
+}
+section#app > div#clock > div h2 span {
+  color: #c8d6e5;
+}
+section#app > div#clock > div h2 span.small {
+  color: #54a0ff;
+  font-size: 0.375em;
+  font-weight: 300;
+}
+section#app > div#clock > div h4 {
+  color: #c8d6e5;
+  padding: 0 0.875em;
+  margin: 0;
+  font-size: 1.125em;
+  font-weight: 200;
+}
+section#app > div#clock > div h4 span {
+  color: #1dd1a1;
+  font-weight: 300;
+}
+section#app > div#clock > div button {
+  display: block;
+  color: #fff;
+  width: 100%;
+  padding: 0.75em;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+section#app > div#clock > div button:active {
+  outline: none;
+}
+section#app > div#clock > div button#snooze {
+  background-color: #ff9229;
+  margin-top: 1em;
+  font-size: 1.25em;
+}
+section#app > div#clock > div button#snooze:hover {
+  background-color: #ff8510;
+}
+section#app > div#clock > div button#off {
+  background-color: #222f3e;
+  font-size: 0.875em;
+}
+section#app > div#schedule {
+  height: 100%;
+  background-color: #2b3b4e;
+  overflow-y: auto;
+}
+section#app > div#schedule > div {
+  position: relative;
+  margin: 5.75em 1.25em;
+  margin-bottom: 2.5em;
+}
+section#app > div#schedule > div > div {
+  transition: top 0.125s ease;
+}
+section#app > div#schedule > div div#line {
+  position: relative;
+  height: 2px;
+  background-color: #54a0ff;
+  box-shadow: 0 0 5px rgba(17, 17, 17, 0.75);
+  z-index: 100;
+}
+section#app > div#schedule > div div#alarm,
+section#app > div#schedule > div div#deadline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+section#app > div#schedule > div div#alarm > span,
+section#app > div#schedule > div div#deadline > span {
+  color: #c8d6e5;
+  width: 3em;
+  padding-right: 1em;
+  text-align: right;
+}
+section#app > div#schedule > div div#alarm > div,
+section#app > div#schedule > div div#deadline > div {
+  flex: 1;
+  background-color: #ff6b6b;
+}
+section#app > div#schedule > div div#alarm > div {
+  height: 2px;
+}
+section#app > div#schedule > div div#deadline > div {
+  height: 5px;
+}
+section#app > div#schedule > div div.event {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+section#app > div#schedule > div div.event.passed {
+  opacity: 0.5;
+}
+section#app > div#schedule > div div.event > span {
+  color: #c8d6e5;
+  width: 3em;
+  padding: 0.25em 0;
+  padding-right: 1em;
+  text-align: right;
+}
+section#app > div#schedule > div div.event > div {
+  flex: 1;
+  height: 100%;
+  background-color: #222f3e;
+  border-radius: 3px;
+}
+section#app > div#schedule > div div.event > div > div {
+  display: block;
+  color: #fff;
+  padding: 0.25em 1.5em;
+}
+section#app div#snooze {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-color: rgba(34, 47, 62, 0.95);
+  z-index: 1000;
+}
+section#app div#snooze.visible {
+  display: flex;
+}
+section#app div#snooze > div {
+  width: 20em;
+  max-width: calc(100% - 5em);
+}
+section#app div#snooze > div button {
+  display: block;
+  color: #fff;
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 0.5em;
+  background-color: #54a0ff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+section#app div#snooze > div button:active {
+  outline: none;
+}
+section#app div#snooze > div button:hover {
+  background-color: #3a92ff;
+}
+section#app div#snooze > div button span {
+  color: #c8d6e5;
+}
+section#app audio {
+  display: none;
+}
+html {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+body {
+  margin: 0;
+}
