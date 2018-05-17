@@ -1,0 +1,222 @@
+@import (reference) '../../less/variables.less';
+
+section#app {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	overflow: hidden;
+	background-color: @darker;
+
+	>div {
+		flex: 1;
+
+		&#clock {
+			>div {
+				padding: 1.875em 1.25em;
+
+				h2 {
+					color: @white;
+					margin: 0;
+					font-size: 5em;
+					font-weight: 200;
+
+					span {
+						color: @light;
+
+						&.small {
+							color: @blue;
+							font-size: 0.375em;
+							font-weight: 300;
+						}
+					}
+				}
+
+				h4 {
+					color: @light;
+					padding: 0 0.875em;
+					margin: 0;
+					font-size: 1.125em;
+					font-weight: 200;
+
+					span {
+						color: @green;
+						font-weight: 300;
+					}
+				}
+
+				button {
+					display: block;
+					color: @white;
+					width: 100%;
+					padding: 0.75em;
+					margin-top: 0.5em;
+					border: none;
+					border-radius: 3px;
+					outline: none;
+					font: inherit;
+					box-sizing: border-box;
+					cursor: pointer;
+
+					&:active {
+						outline: none;
+					}
+
+					&#snooze {
+						background-color: darken(@orange, 5%);
+						margin-top: 1em;
+						font-size: 1.25em;
+
+						&:hover {
+							background-color: darken(@orange, 10%);
+						}
+					}
+
+					&#off {
+						background-color: @darker;
+						font-size: 0.875em;
+					}
+				}
+			}
+		}
+
+		&#schedule {
+			height: 100%;
+			background-color: @dark;
+			overflow-y: auto;
+
+			>div {
+				position: relative;
+				margin: 5.75em 1.25em;
+				margin-bottom: 2.5em;
+
+				>div {
+					transition: top 0.125s ease;
+				}
+
+				div#line {
+					position: relative;
+					height: 2px;
+					background-color: @blue;
+					box-shadow: 0 0 5px fade(@black, 75%);
+					z-index: 100;
+				}
+
+				div#alarm, div#deadline {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					position: absolute;
+					left: 0;
+					right: 0;
+
+					>span {
+						color: @light;
+						width: 3em;
+						padding-right: 1em;
+						text-align: right;
+					}
+
+					>div {
+						flex: 1;
+						background-color: @red;
+					}
+				}
+
+				div#alarm>div {
+					height: 2px;
+				}
+
+				div#deadline>div {
+					height: 5px;
+				}
+
+				div.event {
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					position: absolute;
+					left: 0;
+					right: 0;
+
+					&.passed {
+						opacity: 0.5;
+					}
+
+					>span {
+						color: @light;
+						width: 3em;
+						padding: 0.25em 0;
+						padding-right: 1em;
+						text-align: right;
+					}
+
+					>div {
+						flex: 1;
+						height: 100%;
+						background-color: @darker;
+						border-radius: 3px;
+
+						>div {
+							display: block;
+							color: @white;
+							padding: 0.25em 1.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div#snooze {
+		display: none;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 50%;
+		background-color: fade(@darker, 95%);
+		z-index: 1000;
+
+		&.visible {
+			display: flex;
+		}
+
+		>div {
+			width: 20em;
+			max-width: ~'calc(100% - 5em)';
+
+			button {
+				display: block;
+				color: @white;
+				width: 100%;
+				padding: 0.75em;
+				margin-bottom: 0.5em;
+				background-color: @blue;
+				border: none;
+				border-radius: 3px;
+				outline: none;
+				font: inherit;
+				box-sizing: border-box;
+				cursor: pointer;
+
+				&:active {
+					outline: none;
+				}
+
+				&:hover {
+					background-color: darken(@blue, 5%);
+				}
+
+				span {
+					color: @light;
+				}
+			}
+		}
+	}
+
+	audio {
+		display: none;
+	}
+}
