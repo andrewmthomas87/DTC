@@ -36,6 +36,18 @@ section#app > div#clock > div h4 span {
   color: #1dd1a1;
   font-weight: 300;
 }
+section#app > div#clock > div h5 {
+  color: #c8d6e5;
+  padding: 0 1.125em;
+  margin: 0;
+  margin-top: 1em;
+  font-size: 0.875em;
+  font-weight: 200;
+}
+section#app > div#clock > div h5 span {
+  color: #ff6b6b;
+  font-weight: 300;
+}
 section#app > div#clock > div button {
   display: block;
   color: #fff;
